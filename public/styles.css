@@ -1,0 +1,66 @@
+/* Resetting default styles and setting body styles */
+body {
+    font-family: 'Arial', sans-serif; /* Setting font family for the entire page */
+    background-color: #d99999; /* Setting background color */
+    margin: 0; /* Removing default margin */
+    padding: 0; /* Removing default padding */
+}
+
+/* Styling for the main content container */
+.container {
+    width: 80%; /* Setting width of the container */
+    margin: 0 auto; /* Centering the container horizontally */
+    text-align: center; /* Aligning text content to the center */
+    padding: 20px; /* Adding padding around the content */
+}
+
+/* Styling for main heading */
+h1 {
+    color: #333; /* Setting text color */
+    margin-bottom: 20px; /* Adding margin at the bottom of the heading */
+}
+
+/* Styling for error messages */
+.error {
+    color: red; /* Setting text color to red */
+}
+
+/* Styling for the search form */
+.search-form {
+    display: flex; /* Using flexbox for layout */
+    justify-content: center; /* Centering items horizontally */
+    margin-bottom: 20px; /* Adding margin at the bottom */
+}
+
+/* Styling for search input */
+.search-form input[type="text"] {
+    width: 300px; /* Setting width of the input field */
+    padding: 10px; /* Adding padding inside the input field */
+    border: 1px solid #ccc; /* Adding border with color */
+    border-radius: 5px; /* Adding border radius for rounded corners */
+    margin-right: 10px; /* Adding margin on the right side of the input */
+    font-size: 16px; /* Setting font size */
+}
+
+/* Styling for search button */
+.search-form button {
+    padding: 10px 20px; /* Adding padding inside the button */
+    background-color: #007bff; /* Setting background color */
+    color: white; /* Setting text color */
+    border: none; /* Removing border */
+    border-radius: 5px; /* Adding border radius for rounded corners */
+    cursor: pointer; /* Changing cursor to pointer on hover */
+    font-size: 16px; /* Setting font size */
+}
+
+/* Hover effect for search button */
+.search-form button:hover {
+    background-color: #0056b3; /* Changing background color on hover */
+}
+
+/* Styling for the back link */
+.back-link {
+    display: inline-block; /* Displaying as inline-block for proper positioning */
+    margin-bottom: 20px; /* Adding margin at the bottom */
+    /* Missing color property in original code */
+}

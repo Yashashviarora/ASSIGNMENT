@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata for character encoding and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the page -->
+    <title>Search Results</title>
+    
+    <!-- Link to an external CSS file for styling -->
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <!-- Main container for the content -->
+    <div class="container">
+        <!-- Heading for the search results page -->
+        <h1>Search Results</h1>
+        
+        <!-- Link to go back to the search page -->
+        <a href="/" class="back-link">Go Back</a>
+        
+        <!-- Container for displaying search results -->
+        <div class="results">
+            <!-- Condition to check if there are no results -->
+            <% if (results.length === 0) { %>
+                <p class="no-results">No results found.</p>
+            <% } else { %>
+                <!-- Loop through each result in the 'results' array -->
+                <% results.forEach(result => { %>
+                    <div class="result">
+                        <!-- Display movie poster with alt text as movie title -->
+                        <img src="<%= result.Poster %>" alt="<%= result.Title %>">
+                        
+                        <!-- Display movie title -->
+                        <h2><%= result.Title %></h2>
+                        
+                        <!-- Display movie year -->
+                        <p>Year: <%= result.Year %></p>
+                        
+                        <!-- Display movie type (e.g., movie, series) -->
+                        <p>Type: <%= result.Type %></p>
+                        
+                        <!-- Form to add the movie to favorites -->
+                        <form action="/favorite" method="POST">
+                            <!-- Hidden input fields to send movie details to the server -->
+                            <input type="hidden" name="title" value="<%= result.Title %>">
+                            <input type="hidden" name="year" value="<%= result.Year %>">
+                            <input type="hidden" name="type" value="<%= result.Type %>">
+                            <input type="hidden" name="poster" value="<%= result.Poster %>">
+                            
+                            <!-- Button to submit the form -->
+                            <button type="submit" class="favorite-button">Add to Favorites</button>
+                        </form>
+                    </div>
+                <% }) %>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
